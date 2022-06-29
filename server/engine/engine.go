@@ -17,7 +17,7 @@ type Engine interface {
 	// with the specified handler. TLS settings can be specified with the certificate
 	// and key options. If key and certificate are nil TLS is not used.
 	ListenAndServe(ctx context.Context, string, certificate string, key string, h http.Handler) error
-	// Function for just listening but not responding
+	// Function for listening but not responding
 	Listen(ctx context.Context)
 	// The method for shutting down without interrupting server processes
 	GracefullyShutdown(ctx context.Context)
